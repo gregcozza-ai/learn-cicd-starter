@@ -1,6 +1,6 @@
-![output of CI test](https://github.com/gregcozza-ai/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
-
 # learn-cicd-starter (Notely)
+
+![output of CI test](https://github.com/gregcozza-ai/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 This repo contains the starter code for the "Notely" application for the "Learn CICD" course on [Boot.dev](https://boot.dev).
 
