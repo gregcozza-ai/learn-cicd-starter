@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strings"
+	"strconv"
 	"time"
 
 	"github.com/go-chi/chi"
@@ -93,11 +93,9 @@ func main() {
 	srv := &http.Server{
 		Addr:              ":" + port,
 		Handler:           router,
-		ReadHeaderTimeout: 15 * time.Second,
+		ReadHeaderTimeout: 5 * time.Second,
 	}
-	safePort := strings.ReplaceAll(port, "\n", "")
-	safePort = strings.ReplaceAll(safePort, "\r", "")
-
-	log.Printf("Serving on port: %q\n", safePort)
+	
+	log.Printf("Serving on port: %s\n", strconv.Quote(port))
 	log.Fatal(srv.ListenAndServe())
 }
