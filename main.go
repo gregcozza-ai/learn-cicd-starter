@@ -95,7 +95,7 @@ func main() {
 		Handler:           router,
 		ReadHeaderTimeout: 5 * time.Second,
 	}
-	
+
 	log.Printf("Serving on port: %s\n", strconv.Quote(port))
 	log.Fatal(srv.ListenAndServe())
 }
